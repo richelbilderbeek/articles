@@ -184,12 +184,11 @@ public:
 };
 
 #endif // QTWIDGET_H
-``` 
+```
 
 ## QtWidget.h
 
 ```
-
 #include "qtwidget.h"
 
 QtWidget::QtWidget(QWidget *parent) :
@@ -208,7 +207,7 @@ void QtWidget::mousePressEvent(QMouseEvent *)
 
 ## Running the Qt application
 
-Click 'Build -&gt; Run' or CTRL-R to run the application.
+Click 'Build | Run' or CTRL-R to run the application.
 
 ## Conclusion
 
