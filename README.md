@@ -4,21 +4,21 @@ I have written the following articles:
 
 ## C++
 
- * [Comparison of C++ Builder and Qt Creator](http://richelbilderbeek.nl/CppCompareCppBuilderAndQtCreator.htm)
- * [Comparison of C++ Builder and Qt Creator, again](http://richelbilderbeek.nl/CppCompareCppBuilderAndQtCreatorAgain.htm)
- * [From Qt signal to Boost signal](http://richelbilderbeek.nl/CppFromQtSignalToBoostSignal.htm)
- * [From desktop to Symbian application, using Qt Creator under Ubuntu](http://richelbilderbeek.nl/CppFromQtCreatorUbuntuDesktopToSymbian.htm)
- * [Thinking Wt 1: general](http://richelbilderbeek.nl/CppThinkingWt1.htm)
- * [Thinking Wt 2: creating a TicTacToe widget](http://richelbilderbeek.nl/CppThinkingWt2.htm)
- * [Thinking Wt 3: creating a TicTacToe game](http://richelbilderbeek.nl/CppThinkingWt3.htm)
- * [Thinking Wt 4: polishing a TicTacToe game](http://richelbilderbeek.nl/CppThinkingWt4.htm)
- * [Thinking Qt 1: general](http://richelbilderbeek.nl/CppThinkingQt1.htm)
- * [Porting an application from C++ Builder to Qt Creator](http://richelbilderbeek.nl/CppFromCppBuilderToQtCreator.htm)
- * [Create a web application from a desktop application](http://richelbilderbeek.nl/CppFromDesktopToWebApplication.htm)
- * [Comparing shared_ptrs](http://richelbilderbeek.nl/CppCompareShared_ptrs.htm)
- * [Wt example 3: broadcasting](http://richelbilderbeek.nl/CppWtExample3.htm)
- * [Wt example 4: broadcasting using WtBroadcastServer](http://richelbilderbeek.nl/CppWtExample4.htm)
- * [Working with a testing thread](http://richelbilderbeek.nl/CppTestingThread.htm)
+ * [compare_cpp_builder_and_qt_creator](compare_cpp_builder_and_qt_creator/README.md)
+ * [compare_cpp_builder_and_qt_creator_again](compare_cpp_builder_and_qt_creator_again/README.md)
+ * [compare_shared_ptrs](compare_shared_ptrs/README.md)
+ * [from_cpp_builder_to_qt_creator](from_cpp_builder_to_qt_creator/README.md)
+ * [from_desktop_to_web_application](from_desktop_to_web_application/README.md)
+ * [from_qt_creater_ubtuntu_desktop_to_symbian](from_qt_creater_ubtuntu_desktop_to_symbian/README.md)
+ * [from_qt_signal_to_boost_signal](from_qt_signal_to_boost_signal/README.md)
+ * [testing_thread](testing_thread/README.md)
+ * [thinking_qt_1](thinking_qt_1/README.md)
+ * [thinking_wt_1](thinking_wt_1/README.md)
+ * [thinking_wt_2](thinking_wt_2/README.md)
+ * [thinking_wt_3](thinking_wt_3/README.md)
+ * [thinking_wt_4](thinking_wt_4/README.md)
+ * [wt_example_3](wt_example_3/README.md)
+ * [wt_example_4](wt_example_4/README.md)
 
 ## R
 
