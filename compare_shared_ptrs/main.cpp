@@ -1,51 +1,6 @@
-# Comparing shared_ptrs
+/*
+///The problem
 
-This [article](CppArticle.htm) describes an architectural problem and
-then compares two solutions, using the [C++98](Cpp98.htm) and
-[C++11](Cpp11.htm) [standards](CppStandard.htm) respectively.
-
- 
-
--   [Download the Qt Creator project
-    'CppCompareShared\_ptrs' (zip)](CppCompareShared_ptrs.zip)
-
- 
-
- 
-
- 
-
- 
-
- 
-
-The problem
------------
-
- 
-
-Suppose you have a [class](CppClass.htm) called 'Test' you want to have
-managed. So, a [class](CppClass.htm) called 'Source' is written for
-simply this purpose. It is kind of a source, because it produces
-read-only versions of the Test managed by it. These read-only Tests are
-used by Observer.
-
- 
-
-An example where one would want to do this, is when a program loads its
-parameters from file. These parameters are not to be altered, but might
-be used throughout the program.
-
- 
-
-But the problem is as follows: what if the original source changes the
-thing its manages? How can the observer know this?
-
- 
-
-The code below compiles, runs but does not meet our needs:
-
-```
 #include <cassert>
 #include <boost/shared_ptr.hpp>
 
@@ -92,21 +47,12 @@ int main()
   assert(source.Get()->m_x == 2);
   assert(observer.Get()->m_x == 2); //Observer still has old version
 }
-```
 
-The final line of code shows the problem: the observer still has an old
-copy of Test (with a value of one), instead of the new one (with a value
-of two).
+*/
 
-## Solution 1: use of the C++98 boost::shared_ptr
+/*
 
-When instead of the observer having a
-[boost::shared\_ptr](CppShared_ptr.htm)&lt;**[const](CppConst.htm)**
-Test&gt;, this is changed to
-[boost::weak\_ptr](CppWeak_ptr.htm)&lt;**[const](CppConst.htm)**
-Test&gt;, the program will give a fine run-time error:
-
-```
+///The solution: boost::weak_ptr
 
 #include <cassert>
 #include <boost/shared_ptr.hpp>
@@ -158,21 +104,8 @@ int main()
   assert(source.Get()->m_x == 2);
   assert(observer.Get().lock()->m_x == 2); //Good: run-time error: 'Assertion 'px != 0' failed'.
 }
-```
+*/
 
-Sure, a run-time error has its drawbacks, but with a debugger its source
-can be located easily.
-
-
-## Solution 2: use of the C++11 std::shared_ptr
-
-When replacing [boost::shared\_ptr](CppShared_ptr.htm) and
-[boost::weak\_ptr](CppWeak_ptr.htm) to
-[std::shared\_ptr](CppShared_ptr.htm) and
-[std::weak\_ptr](CppWeak_ptr.htm) respectively also gives a fine
-run-time error:
-
-```
 
 ///The solution: std::weak_ptr
 #include <memory>
@@ -223,20 +156,3 @@ int main()
   assert(source.Get()->m_x == 2);
   assert(observer.Get().lock()->m_x == 2); //Mediocre: segmentation fault, but no reason is given
 }
-``` 
-
-The problem is, that in this case, a segmentation fault is given,
-instead of a failed assertion. Also, the debugger could not get me to
-pinpoint to the source of the error.
-
-
-## Conclusion
-
- * `weak_ptr`'s are better observers than `std::shared_ptr`'s
- * you might want to use `boost::shared_ptr` instead of `std::shared_ptr`
-   until debug support is better
-
-## External links
-
-  * [The original HTML article](http://richelbilderbeek.nl/CppCompareShared_ptrs.htm) 
-
