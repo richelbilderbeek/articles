@@ -2,7 +2,9 @@
 
 I have written the following articles:
 
- * [Comparison of C++ Builder and Qt Creator](http://richelbilderbeek.nl/Cpp)
+## C++
+
+ * [Comparison of C++ Builder and Qt Creator](http://richelbilderbeek.nl/CppCompareCppBuilderAndQtCreator.htm)
  * [Comparison of C++ Builder and Qt Creator, again](http://richelbilderbeek.nl/CppCompareCppBuilderAndQtCreatorAgain.htm)
  * [From Qt signal to Boost signal](http://richelbilderbeek.nl/CppFromQtSignalToBoostSignal.htm)
  * [From desktop to Symbian application, using Qt Creator under Ubuntu](http://richelbilderbeek.nl/CppFromQtCreatorUbuntuDesktopToSymbian.htm)
@@ -17,4 +19,7 @@ I have written the following articles:
  * [Wt example 3: broadcasting](http://richelbilderbeek.nl/CppWtExample3.htm)
  * [Wt example 4: broadcasting using WtBroadcastServer](http://richelbilderbeek.nl/CppWtExample4.htm)
  * [Working with a testing thread](http://richelbilderbeek.nl/CppTestingThread.htm)
- 
+
+## R
+
+ * [Raising your code to professional standards](https://github.com/richelbilderbeek/sdj_raising_your_code_to_professional_standards)
