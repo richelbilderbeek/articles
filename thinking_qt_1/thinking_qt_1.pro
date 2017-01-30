@@ -1,20 +1,11 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2011-03-22T15:17:08
-#
-#-------------------------------------------------
+QT += core gui widgets
 
-QT       += core gui
+SOURCES += \
+  main.cpp \
+  qtdialog.cpp \
+  qtwidget.cpp
 
-TARGET = CppThinkingQt1
-TEMPLATE = app
+HEADERS  += \
+  qtdialog.h \
+  qtwidget.h
 
-
-SOURCES += main.cpp\
-        qtdialog.cpp \
-    qtwidget.cpp
-
-HEADERS  += qtdialog.h \
-    qtwidget.h
-
-FORMS    +=

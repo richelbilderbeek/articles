@@ -1,5 +1,9 @@
 # articles
 
+[![Build Status](https://travis-ci.org/richelbilderbeek/articles.svg?branch=master)](https://travis-ci.org/richelbilderbeek/articles)
+[![codecov.io](https://codecov.io/github/richelbilderbeek/articles/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/articles?branch=master)
+[![gplv3](http://www.gnu.org/graphics/gplv3-88x31.png)](http://www.gnu.org/licenses/gpl.html)
+
 I have written the following articles:
 
 ## C++
