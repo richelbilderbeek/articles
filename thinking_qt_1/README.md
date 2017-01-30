@@ -7,8 +7,7 @@ Because I use this program architecture also when using the
 Wt library, this
 article is very similar to 'Thinking Wt 1: general'.
 
-![thinking_qt_1](thinking_qt_1)
-
+![thinking_qt_1](thinking_qt_1.png)
 
 ## Overview
 
@@ -71,7 +70,8 @@ only call WRun with a createApplication function that
 only returns a newly created
 Qt::QApplication:
 
- ```
+
+```
 #include <QApplication>
 #include "qtdialog.h"
 
@@ -217,7 +217,7 @@ Qt program architectures you can use, for a very basic
 application. In my humble opinion, this architecture makes sense, but I
 am open to discussion on this subject.
 
-![thinking_qt_1](thinking_qt_1)
+![thinking_qt_1](thinking_qt_1.png)
 
 ## References
 
