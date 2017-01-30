@@ -42,7 +42,7 @@ script:
   - make
   - thinking_qt_1 &
   - sleep 10
-  - sudo kill thinking_qt_1
+  - sudo killall thinking_qt_1
   - cd ..
   # Thinking Wt 1
   - cd thinking_wt_1
@@ -50,7 +50,7 @@ script:
   - make
   - thinking_wt_1 &
   - sleep 10
-  - sudo kill thinking_wt_1
+  - sudo killall thinking_wt_1
   - cd ..
   # Thinking Wt 2
   - cd thinking_wt_2
@@ -59,21 +59,21 @@ script:
   - make
   - thinking_wt_2_1 &
   - sleep 10
-  - sudo kill thinking_wt_2_1
+  - sudo killall thinking_wt_2_1
   - cd ..
   - cd thinking_wt_2_2
   - qmake
   - make
   - thinking_wt_2_2 &
   - sleep 10
-  - sudo kill thinking_wt_2_2
+  - sudo killall thinking_wt_2_2
   - cd ..
   - cd thinking_wt_2_3
   - qmake
   - make
   - thinking_wt_2_3 &
   - sleep 10
-  - sudo kill thinking_wt_2_3
+  - sudo killall thinking_wt_2_3
   - cd ..
   - cd ..
   ###############################################
