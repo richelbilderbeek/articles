@@ -41,14 +41,40 @@ script:
   - qmake
   - make
   - thinking_qt_1 &
-  - killall -9 thinking_qt_1
+  - sleep 10
+  - sudo kill thinking_qt_1
   - cd ..
   # Thinking Wt 1
   - cd thinking_wt_1
   - qmake
   - make
   - thinking_wt_1 &
-  - killall -9 thinking_wt_1
+  - sleep 10
+  - sudo kill thinking_wt_1
+  - cd ..
+  # Thinking Wt 2
+  - cd thinking_wt_2
+  - cd thinking_wt_2_1
+  - qmake
+  - make
+  - thinking_wt_2_1 &
+  - sleep 10
+  - sudo kill thinking_wt_2_1
+  - cd ..
+  - cd thinking_wt_2_2
+  - qmake
+  - make
+  - thinking_wt_2_2 &
+  - sleep 10
+  - sudo kill thinking_wt_2_2
+  - cd ..
+  - cd thinking_wt_2_3
+  - qmake
+  - make
+  - thinking_wt_2_3 &
+  - sleep 10
+  - sudo kill thinking_wt_2_3
+  - cd ..
   - cd ..
   ###############################################
   # Code coverage
