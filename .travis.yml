@@ -43,6 +43,13 @@ script:
   - thinking_qt_1 &
   - killall -9 thinking_qt_1
   - cd ..
+  # Thinking Wt 1
+  - cd thinking_wt_1
+  - qmake
+  - make
+  - thinking_wt_1 &
+  - killall -9 thinking_wt_1
+  - cd ..
   ###############################################
   # Code coverage
   ###############################################
