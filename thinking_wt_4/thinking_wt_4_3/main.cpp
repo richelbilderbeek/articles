@@ -1,5 +1,4 @@
 #include <boost/signals2.hpp>
-#include <QFile>
 #include <Wt/WApplication>
 #include <Wt/WBreak>
 #include <Wt/WBrush>
@@ -13,6 +12,7 @@
 #include <Wt/WPushButton>
 #include <Wt/WText>
 #include <Wt/WTextArea>
+#include <QFile>
 #include "tictactoe.h"
 //---------------------------------------------------------------------------
 struct WtTicTacToeWidget : public Wt::WPaintedWidget

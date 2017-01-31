@@ -1,8 +1,5 @@
 QT       += core
 QT       -= gui
-CONFIG   += console
-CONFIG   -= app_bundle
-TEMPLATE = app
 
 #Boost
 LIBS += -lboost_signals
