@@ -405,7 +405,6 @@ struct TestAsciiArterDialog
 ### testasciiarterdialog.cpp
 
 ```
-
 #include "asciiarter.h"
 #include "testasciiarterdialog.h"
 //---------------------------------------------------------------------------
@@ -468,7 +467,9 @@ void TestAsciiArterDialog::SetWidth(const int width)
 }
 //---------------------------------------------------------------------------
 
-``` 
+```
+
+
 
 ## Put the Qt GUI functionality in a class called QtTestAsciiArterDialog
 
