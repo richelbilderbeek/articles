@@ -1,47 +1,23 @@
 # Comparing shared_ptrs
 
-This [article](CppArticle.htm) describes an architectural problem and
-then compares two solutions, using the [C++98](Cpp98.htm) and
-[C++11](Cpp11.htm) [standards](CppStandard.htm) respectively.
+This article describes an architectural problem and
+then compares two solutions, using the C++98 and
+C++11 standards respectively.
 
- 
+## The problem
 
--   [Download the Qt Creator project
-    'CppCompareShared\_ptrs' (zip)](CppCompareShared_ptrs.zip)
-
- 
-
- 
-
- 
-
- 
-
- 
-
-The problem
------------
-
- 
-
-Suppose you have a [class](CppClass.htm) called 'Test' you want to have
-managed. So, a [class](CppClass.htm) called 'Source' is written for
+Suppose you have a class called `Test` you want to have
+managed. So, a class called `Source` is written for
 simply this purpose. It is kind of a source, because it produces
-read-only versions of the Test managed by it. These read-only Tests are
-used by Observer.
-
- 
+read-only versions of the `Test` managed by it. These read-only `Tests` are
+used by `Observer`.
 
 An example where one would want to do this, is when a program loads its
 parameters from file. These parameters are not to be altered, but might
 be used throughout the program.
 
- 
-
 But the problem is as follows: what if the original source changes the
 thing its manages? How can the observer know this?
-
- 
 
 The code below compiles, runs but does not meet our needs:
 
@@ -100,14 +76,10 @@ of two).
 
 ## Solution 1: use of the C++98 boost::shared_ptr
 
-When instead of the observer having a
-[boost::shared\_ptr](CppShared_ptr.htm)&lt;**[const](CppConst.htm)**
-Test&gt;, this is changed to
-[boost::weak\_ptr](CppWeak_ptr.htm)&lt;**[const](CppConst.htm)**
-Test&gt;, the program will give a fine run-time error:
+When instead of the observer having a `boost::shared_ptr<const Test>`, this is changed to
+`boost::weak_ptr<const Test>`, the program will give a fine run-time error:
 
 ```
-
 #include <cassert>
 #include <boost/shared_ptr.hpp>
 #include <boost/weak_ptr.hpp>
@@ -166,10 +138,10 @@ can be located easily.
 
 ## Solution 2: use of the C++11 std::shared_ptr
 
-When replacing [boost::shared\_ptr](CppShared_ptr.htm) and
-[boost::weak\_ptr](CppWeak_ptr.htm) to
-[std::shared\_ptr](CppShared_ptr.htm) and
-[std::weak\_ptr](CppWeak_ptr.htm) respectively also gives a fine
+When replacing `boost::shared_ptr` and
+`boost::weak_ptr` to
+`std::shared_ptr` and
+`std::weak_ptr` respectively also gives a fine
 run-time error:
 
 ```
