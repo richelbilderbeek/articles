@@ -145,7 +145,6 @@ When replacing `boost::shared_ptr` and
 run-time error:
 
 ```
-
 ///The solution: std::weak_ptr
 #include <memory>
 #include <cassert>
@@ -195,7 +194,7 @@ int main()
   assert(source.Get()->m_x == 2);
   assert(observer.Get().lock()->m_x == 2); //Mediocre: segmentation fault, but no reason is given
 }
-``` 
+```
 
 The problem is, that in this case, a segmentation fault is given,
 instead of a failed assertion. Also, the debugger could not get me to
