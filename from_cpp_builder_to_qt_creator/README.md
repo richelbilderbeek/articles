@@ -467,6 +467,7 @@ void TestAsciiArterDialog::SetWidth(const int width)
   m_width = width;
 }
 //---------------------------------------------------------------------------
+
 ``` 
 
 ## Put the Qt GUI functionality in a class called QtTestAsciiArterDialog
@@ -520,6 +521,7 @@ private slots:
 };
 //---------------------------------------------------------------------------
 #endif // QTTESTASCIIARTERDIALOG_H
+
 ``` 
 
 ### qttestasciiarterdialog.cpp
@@ -657,6 +659,7 @@ void QtTestAsciiArterDialog::on_button_about_clicked()
   d.exec();
 }
 //---------------------------------------------------------------------------
+
 ```
 
 ## Conclusion
