@@ -123,9 +123,9 @@ script:
   - cd ..
   - cd ..
   ###############################################
-  # Thinking Wt 3
+  # Thinking Wt 4
   ###############################################
-  - cd thinking_wt_3
+  - cd thinking_wt_4
   - cd thinking_wt_4_0
   - qmake
   - make
