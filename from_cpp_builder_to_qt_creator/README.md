@@ -1,65 +1,67 @@
 # Porting an application from C++ Builder to Qt Creator
 
-This [article](CppArticle.htm) describes how to [port](CppPort.htm) a
-[C++ Builder (6.0)](CppBuilder.htm) application to [Qt
-Creator](CppQtCreator.htm). The main advantage of doing so, is that the
+This article describes how to port a
+C++ Builder (6.0) application to Qt
+Creator. The main advantage of doing so, is that the
 Windows-only application becomes cross-platform.
 
-This [article](CppArticle.htm) uses the architecture described in the
-[article](CppArticle.htm) [Thinking Qt 1: general](CppThinkingQt1.htm).
+This article uses the architecture described in the
+article 'Thinking Qt 1: general'
 
 ## Overview
 
-This [article](CppArticle.htm) follows these steps:
+This article follows these steps:
 
 1.  Discussing the starting point
-2.  Put all Ascii-arter functionality in a [class](CppClass.htm) called
-    [AsciiArter](CppAsciiArter.htm)
-3.  Put the [GUI](CppGui.htm) logic in a platform-independent
-    [class](CppClass.htm) called
-    [TestAsciiArterDialog](CppTestAsciiArterDialog.htm)
-4.  Put the [Qt](CppQt.htm) [GUI](CppGui.htm) functionality in a
-    [class](CppClass.htm) called
-    [QtTestAsciiArterDialog](CppQtTestAsciiArterDialog.htm)
+2.  Put all Ascii-arter functionality in a class called
+    AsciiArter
+3.  Put the GUI logic in a platform-independent
+    class called
+    TestAsciiArterDialog
+4.  Put the Qt GUI functionality in a
+    class called
+    QtTestAsciiArterDialog
 
 ## Starting point
 
-This [article](CppArticle.htm)'s starting point is the code from
-[AsciiArter source code version 1.0](ToolAsciiArterSource_1_0.htm).
+This article's starting point is the code from AsciiArter source code version 1.0.
 
 Taking a look at the code, the following improvements can be made:
 
--   Put all Ascii-arter functionality in a [class](CppClass.htm) called
-    [AsciiArter](CppAsciiArter.htm)
--   Put the [GUI](CppGui.htm) logic in a platform-independent
-    [class](CppClass.htm) called
-    [TestAsciiArterDialog](CppTestAsciiArterDialog.htm)
--   Put the [Qt](CppQt.htm) [GUI](CppGui.htm) functionality in a
-    [class](CppClass.htm) called
-    [QtTestAsciiArterDialog](CppQtTestAsciiArterDialog.htm)
+-   Put all Ascii-arter functionality in a class called
+    AsciiArter
+-   Put the GUI logic in a platform-independent
+    class called
+    TestAsciiArterDialog
+-   Put the Qt GUI functionality in a
+    class called
+    QtTestAsciiArterDialog
 
 This change in architecture can be displayed graphically:
 
--   ![C++ Builder](PicCppBuilder.png) [C++ Builder
-    architecture (png)](CppFromCppBuilderToQtCreatorBefore.png): all
-    functionality in one [class](CppClass.htm)
--   ![Qt Creator](PicQtCreator.png) [Qt Creator
-    architecture (png)](CppFromCppBuilderToQtCreator.png): all
-    functionality distributed over multiple [classes](CppClass.htm),
-    keeping open the possibility to transform it into a [Wt](CppWt.htm)
-    [web applications](CppWebApplication.htm) (in dashed lines)
+Before:
 
-## Put all Ascii-arter functionality in a [class](CppClass.htm) called [AsciiArter](CppAsciiArter.htm)
+![C++ Builder architecture (png)](CppFromCppBuilderToQtCreatorBefore.png)
+
+Here, all functionality resides in one Winnebago class.
+
+![Qt Creator architecture (png)](CppFromCppBuilderToQtCreator.png)
+
+Here, all functionality is distributed over multiple classes,
+keeping open the possibility to transform it into a Wt
+web applications (in dashed lines)
+
+## Put all Ascii-arter functionality in a class called AsciiArter
 
 I did the following things:
 
--   Removed the use of the [Windows](CppWindows.htm)-only
-    [TImage](CppTImage.htm) [class](CppClass.htm), replaced it by
-    requesting a Y-X ordered 2D [std::vector](CppVector.htm) of
+-   Removed the use of the Windows-only
+    TImage class, replaced it by
+    requesting a Y-X ordered 2D std::vector of
     greyscales
--   Put all [global](CppGlobal.htm) [functions](CppFunction.htm) in the
-    [AsciiArter](CppAsciiArter.htm) [class](CppClass.htm)
-    [namespace](CppNamespace.htm)
+-   Put all global functions in the
+    AsciiArter class
+    namespace
 -   Added versioning
 
 ### asciiarter.h
@@ -350,13 +352,13 @@ const std::vector<std::string> AsciiArter::ImageToAscii(
 //---------------------------------------------------------------------------
 ```
 
-## Put the [GUI](CppGui.htm) logic in a platform-independent [class](CppClass.htm) called [TestAsciiArterDialog](CppTestAsciiArterDialog.htm)
+## Put the GUI logic in a platform-independent class called TestAsciiArterDialog
 
 I did the following things:
 
--   Removed the use of the [Windows](CppWindows.htm)-only
-    [TImage](CppTImage.htm) [class](CppClass.htm), replaced it by
-    requesting a Y-X ordered 2D [std::vector](CppVector.htm) of
+-   Removed the use of the Windows-only
+    TImage class, replaced it by
+    requesting a Y-X ordered 2D std::vector of
     greyscales
 -   Added versioning
 
@@ -472,7 +474,7 @@ void TestAsciiArterDialog::SetWidth(const int width)
 I did the following things:
 
 -   Let GUI library used, Qt in this case, convert the QImage to the
-    requested Y-X ordered 2D [std::vector](CppVector.htm) of greyscales
+    requested Y-X ordered 2D std::vector of greyscales
 
 ### qttestasciiarterdialog.h
 
@@ -660,9 +662,9 @@ void QtTestAsciiArterDialog::on_button_about_clicked()
 ## Conclusion
 
 Instead of explaining all steps in detail, this
-[article](CppArticle.htm) shows a change in architecture from
+article shows a change in architecture from
 Windows-only GUI-dependent to platform-independent as described in the
-[article](CppArticle.htm) [Thinking Qt 1: general](CppThinkingQt1.htm).
+article 'Thinking Qt 1: general'.
 These changes can be viewed in in image:
 
 ![Before](from_cpp_builder_to_qt_creator_1.png)
