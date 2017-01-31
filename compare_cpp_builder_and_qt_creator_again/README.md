@@ -22,63 +22,63 @@ Cpp0x adoption|Already before official standard|Adoption after publication of st
 
 Below, I discuss the three items I encountered most in detail: writing
 console applications, writing GUI applications and documentation needed
-to learn both [IDEs](CppIde.htm).
+to learn both IDEs.
 
 ### Console applications
 
 In the previous article, I stated that developing console applications
-in both [IDE](CppIde.htm)'s was easy. But not only does the [Qt
-Creator](CppQtCreator.htm) support [Boost](CppBoost.htm) fully (as far
-as I know), but an enormous amount of other [libraries](CppLibrary.htm)
+in both IDE's was easy. But not only does the Qt
+Creator support Boost fully (as far
+as I know), but an enormous amount of other libraries
 as well. This boosts (no pun intended) productivity heavily! I do know
-that Embaracadero is working on this, for [C++
-Builder](CppBuilder.htm)'s successor called for RAD Studio.
+that Embaracadero is working on this, for C++
+Builder's successor called for RAD Studio.
 
-What I did not highlight in the previous article, is that [C++
-Builder](CppBuilder.htm) and its applications run under Windows only.
-Except for platform-specific [libraries](CppLibrary.htm), I see no
+What I did not highlight in the previous article, is that C++
+Builder and its applications run under Windows only.
+Except for platform-specific libraries, I see no
 reason to limit oneself to Windows.
 
-### [GUI](CppGui.htm) applications
+### GUI applications
 
-In the previous article, I stated that the GUI designer in [C++
-Builder](CppBuilder.htm) was less cluttered with windows. To increase
+In the previous article, I stated that the GUI designer in C++
+Builder was less cluttered with windows. To increase
 working space, I learned to set the Widget pane to 'Icon View', so I
 could push it to a width of two centimeters. This does not work with the
 text-based sidebars on the right. I hope that in a future version, this
 sidebar can be hidden by a shortcut-key.
 
-I still believe that it is easier to learn [C++
-Builder](CppBuilder.htm): one can use [C++ Builder](CppBuilder.htm)
-without knowing how to design [classes](CppClass.htm). In [Qt
-Creator](CppQtCreator.htm) one sometimes has implement
-sub-[classes](CppClass.htm) and override behavior (for example, when one
-wants to imlement a clickable [QLabel](CppQLabel.htm)). Although I
-believe this design choice of the Qt [library](CppLibrary.htm) is good,
+I still believe that it is easier to learn C++
+Builder: one can use C++ Builder
+without knowing how to design classes. In Qt
+Creator one sometimes has implement
+sub-classes and override behavior (for example, when one
+wants to imlement a clickable QLabel). Although I
+believe this design choice of the Qt library is good,
 I think it is more difficult for beginners: they will have to struggle
-with [classes](CppClass.htm) first, before they will understand how to
+with classes first, before they will understand how to
 do this.
 
-What I did not mention earlier about the Qt and [C++
-Builder](CppBuilder.htm) architectures, is that the Qt architecture is
-const-correct, unlike [C++ Builder](CppBuilder.htm). This aspect makes
+What I did not mention earlier about the Qt and C++
+Builder architectures, is that the Qt architecture is
+const-correct, unlike C++ Builder. This aspect makes
 it easier to understand Qt: a const method promises not to modify its
-members. In [C++ Builder](CppBuilder.htm), this is not promised at all.
+members. In C++ Builder, this is not promised at all.
 
-[QLabel](CppQLabel.htm) is a QWidget to display both text and images.
+QLabel is a QWidget to display both text and images.
 Why this is not seperated in two widgets remains unknown to me. And I
-discovered that [QLabel](CppQLabel.htm) does not emit a signal when it
-is clicked. If [QLabel](CppQLabel.htm) would only display text, I would
+discovered that QLabel does not emit a signal when it
+is clicked. If QLabel would only display text, I would
 agree with this design choice: a clickable label can be mimicked by a
 flat QButton. But I do wished that an image would emit a signal when
 clicked: I use many images as flashy buttons. Personally, I would
 suggest two solutions to the problem:
 
-  * 1. let [QLabel](CppQLabel.htm) emit a signal when clicked, or
+  * 1. let QLabel emit a signal when clicked, or
   * 2. add a QImage widget that emits a signal when clicked
 
-Adding a custom method to a dialog is still tedious in [Qt
-Creator](CppQtCreator.htm), but one gets used to it:
+Adding a custom method to a dialog is still tedious in Qt
+Creator, but one gets used to it:
 
   * 1. add the declaration of the slot to the dialog's declaration, for
     example 'private slots: void OnButtonClick();'
@@ -88,7 +88,7 @@ Creator](CppQtCreator.htm), but one gets used to it:
   * 3. write down the method definition, for example
     'void Dialog::OnButtonClick() { /\* your code \*/ }'
 
-In [C++ Builder](CppBuilder.htm), this was done within three (really!)
+In C++ Builder, this was done within three (really!)
 clicks: click on 'Events' of the Object Inspector, then double-click on
 the signal you want to respond to.
 
@@ -98,24 +98,24 @@ great job. But when I want to add certain constraints, this still too
 often results in unexpected behaviour: for example, I once had an
 application of which I could resize the window to a bigger size, but it
 could not be resized to a smaller surface. So, I still think that the
-[C++ Builder](CppBuilder.htm) TPanels were more intuitive to use.
+C++ Builder TPanels were more intuitive to use.
 
-It hadn't occurred to me before, to note that [Qt
-Creator](CppQtCreator.htm) does not have any non-visual QWidgets. Sure,
-if a widget is visual by definition, this is logical. But [C++
-Builder](CppBuilder.htm) supplied non-visual TComponents, that could be
+It hadn't occurred to me before, to note that Qt
+Creator does not have any non-visual QWidgets. Sure,
+if a widget is visual by definition, this is logical. But C++
+Builder supplied non-visual TComponents, that could be
 placed on the window (but never be seen). This has two advantages:
 
   * 1. it is easier, quicker and safer to manipulate widgets at design
-    time. For example, for the [C++ Builder](CppBuilder.htm) TTimer, one can
+    time. For example, for the C++ Builder TTimer, one can
     set the time, if it already runs, and which method gets called
-    after timeout. From then on, the TTimer gets created and deleted by [C++
-    Builder](CppBuilder.htm). In [Qt Creator](CppQtCreator.htm), one have to
+    after timeout. From then on, the TTimer gets created and deleted by C++
+    Builder. In Qt Creator, one have to
     write a QTimer declaration, set its timeout, set if its started, connect
     it to a method, and delete it, each by one line of code
   * 2. a beginner can find the functionality needed and experiment with it.
     I find it hard to imagine how a beginner would discover to use a QTimer.
-    In [C++ Builder](CppBuilder.htm), everybody will discover TTimer within
+    In C++ Builder, everybody will discover TTimer within
     the first hours
 
 ### Documentation
@@ -125,9 +125,9 @@ I have learned that the Qt documentation is very good. Note the word
 
   * 1. when searching the documentation about a topic like '2D graphics',
     there are multiple ways
-    (QPainter,QGraphicsView,[QLabel](CppQLabel.htm)), some ways using
-    [classes](CppClass.htm) that are connected to (for a beginner: too) many
-    [classes](CppClass.htm), for example when trying to use QGraphicsView,
+    (QPainter,QGraphicsView,QLabel), some ways using
+    classes that are connected to (for a beginner: too) many
+    classes, for example when trying to use QGraphicsView,
     QGraphicsScene and QGraphicsItem
   * 2. if you do know the names, and/or do not understand to override
     virtual functions, for example 'paintEvent', it is unclear how to use
@@ -142,22 +142,21 @@ C++ Builder's.
 
 Still, there are two thingss:
 
-  * 1. Because [C++ Builder](CppBuilder.htm) is easier to learn (as I
+  * 1. Because C++ Builder is easier to learn (as I
     stated above), I nearly ever needed to use its documentation for VCL
-    [classes](CppClass.htm)
-  * 2. Unlike the Qt documentation, [C++ Builder](CppBuilder.htm) also
-    documents [STL](CppStl.htm) classes
+    classes
+  * 2. Unlike the Qt documentation, C++ Builder also
+    documents STL classes
 
 Summarizing this:
 
-  * 1. The [Qt Creator](CppQtCreator.htm) documentation documents its Qt
-    [classes](CppClass.htm) as well as [C++ Builder](CppBuilder.htm)
+  * 1. The Qt Creator documentation documents its Qt
+    classes as well as C++ Builder
     documents its VCL classes
-  * 2. The [Qt Creator](CppQtCreator.htm) documentation takes time to
-    understand, the [C++ Builder](CppBuilder.htm) documentation is more
+  * 2. The Qt Creator documentation takes time to
+    understand, the C++ Builder documentation is more
     intuitive
-  * 3. Unlike [C++ Builder](CppBuilder.htm), the [Qt
-    Creator](CppQtCreator.htm) documentation lacks [STL](CppStl.htm) classes
+  * 3. Unlike C++ Builder, the Qt Creator documentation lacks STL classes
     documentation
 
 ## Summary
@@ -176,12 +175,12 @@ Documentation|VCL well documented, easy to read the documentation, STL fully doc
 
 My personal conclusion has remained the same:
 
-  * 1. [C++ Builder](CppBuilder.htm) is easier to learn
-  * 2. the extra effort learning [Qt Creator](CppQtCreator.htm) is worth
-    it, because [Qt Creator](CppQtCreator.htm) is cross-platform and has a
+  * 1. C++ Builder is easier to learn
+  * 2. the extra effort learning Qt Creator is worth
+    it, because Qt Creator is cross-platform and has a
     superior compiler
 
-## [References](CppReferences.htm)
+## References
 
  * 1. [Nokia overview of all Qt classes](http://doc.qt.nokia.com/4.6/classes.html)
  * 2. [The original HTML version](http://richelbilderbeek.nl/CppCompareCppBuilderAndQtCreatorAgain.htm)
