@@ -85,12 +85,12 @@ script:
   ###############################################
   # Code coverage
   ###############################################
-  - ./get_code_cov >/dev/null
-  - codecov >/dev/null
+  #- ./get_code_cov >/dev/null
+  #- codecov >/dev/null
   ###############################################
   # OCLint
   ###############################################
-  - ./do_oclint
+  #- ./do_oclint
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
