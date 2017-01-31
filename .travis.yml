@@ -50,7 +50,7 @@ script:
   - cd thinking_wt_1
   - qmake
   - make
-  - ./thinking_wt_1 &
+  - ./thinking_wt_1 --docroot . --http-address 0.0.0.0 --http-port 8080 &
   - sleep 10
   - sudo killall thinking_wt_1
   - cd ..
