@@ -125,7 +125,8 @@ beginner needs, where with C++ Builder the brief
 documentation suffices.
 
 ## Summary
- 
+
+
 Criterion|C++ Builder 6.0 Enterprise edition|Qt Creator 1.3.1
 ---|---|---
 Development of console applications|Similar, low Boost support|Similar, complete Boost support
