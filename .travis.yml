@@ -18,6 +18,8 @@ install:
   - export QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
   # C++14
   - sudo apt-get install -qq g++-5
+  # Wt
+  - sudo apt-get install witty witty-dbg witty-dev witty-doc
   # gcov
   - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-5 90
   - sudo pip install codecov
