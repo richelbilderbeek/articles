@@ -1,16 +1,17 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2010-09-17T11:09:34
-#
-#-------------------------------------------------
 QT       += core
 QT       -= gui
-TARGET = CppThinkingWt3_1
-LIBS +=  -lwt -lwthttp
-QMAKE_CXXFLAGS += -DNDEBUG
 CONFIG   += console
 CONFIG   -= app_bundle
 TEMPLATE = app
+
+#Boost
+LIBS += -lboost_signals
+
+#Wt
+LIBS += -lwt -lwthttp
+#Wt uses Boost.Signal, which is deprecated
+DEFINES += BOOST_SIGNALS_NO_DEPRECATION_WARNING
+
 SOURCES += \  
     main.cpp \
     tictactoe.cpp
