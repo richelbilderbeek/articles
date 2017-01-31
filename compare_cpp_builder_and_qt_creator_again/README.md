@@ -6,49 +6,17 @@ months later, at the 23rd of Agust 2010.
 
 ## Quick facts chart
 
-+--------------------------+--------------------------+--------------------------+
-| **Criterium**            | **[C++                   | **[Qt                    |
-|                          | Builder](CppBuilder.htm) | Creator](CppQtCreator.ht |
-|                          | 6.0 Enterprise edition** | m)                       |
-|                          |                          | 1.3.1**                  |
-+--------------------------+--------------------------+--------------------------+
-| **Owner**                | [Embarcadero             | [Qt Development          |
-|                          | Technologies](http://www | Frameworks](http://qt.no |
-|                          | .embarcadero.com)        | kia.com)                 |
-+--------------------------+--------------------------+--------------------------+
-| **Year of release**      | 2002                     | 2010                     |
-+--------------------------+--------------------------+--------------------------+
-| **[Licence](CppLicence.h | Proprietary              | GPL and commercial       |
-| tm)**                    |                          |                          |
-+--------------------------+--------------------------+--------------------------+
-| **Supported operating    | Windows                  | Linux, Mac, Windows      |
-| systems**                |                          |                          |
-+--------------------------+--------------------------+--------------------------+
-| **How to deploy on other | Use emulator on Windows  | Compile code on other    |
-| platform**               | executable               | platform                 |
-+--------------------------+--------------------------+--------------------------+
-| **Default supplied       | Borland                  | [G++](CppGpp.htm)        |
-| [compiler](CppCompiler.h | [BCC32.EXE](CppBcc32Exe. | version 4.4.1            |
-| tm)**                    | htm)                     |                          |
-|                          | version 6.0.10.157       |                          |
-+--------------------------+--------------------------+--------------------------+
-| **[Boost](CppBoost.htm)  | About 20-60%:            | 100% (can this be        |
-| [compiler](CppCompiler.h | [BCC32.EXE](CppBcc32Exe. | true?):                  |
-| tm)                      | htm)                     | [G++](CppGpp.htm) is a   |
-| support**                | is an unsupported        | supported                |
-|                          | [compiler](CppCompiler.h | [compiler](CppCompiler.h |
-|                          | tm)                      | tm)                      |
-+--------------------------+--------------------------+--------------------------+
-| **Supplied with          | [CLX](CppClx.htm),       | [OpenGL](CppOpenGl.htm), |
-| [libraries](CppLibrary.h | [OpenGL](CppOpenGl.htm), | [STL](CppStl.htm),       |
-| tm)**                    | [STL](CppStl.htm),       | [Qt4](CppQt.htm)         |
-|                          | [VCL](CppVcl.htm)        |                          |
-+--------------------------+--------------------------+--------------------------+
-| **[Cpp0x](Cpp0x.htm)     | Pre-standard adoption    | Adoption after           |
-| adoption**               | (in RAD Studio)          | publication of official  |
-|                          |                          | [Cpp0x](Cpp0x.htm)       |
-|                          |                          | standard                 |
-+--------------------------+--------------------------+--------------------------+
+Criterion|C++ Builder 6.0 Enterprise edition|Qt Creator 1.3.1
+---|---|---
+Owner|Embarcadero Technologies|Qt Development Frameworks
+Year of release|2002|2010
+Licence|Proprietary|GPL and commercial
+Supported operating systems|Windows|Linux, Mac, Windows
+How to deploy on other platform|Use emulator on Windows executable|Compile code on other platform
+Default supplied compiler| Borland BCC32.EXE version 6.0.10.157|g++ version 4.4.1
+Boost compiler support|About 20-60%|100%
+Supplied with libraries|CLX, OpenGL, STL, VCL| OpenGL, STL, Qt4
+Cpp0x adoption|Already before official standard|Adoption after publication of standard
 
 ## Discussion
 
@@ -194,69 +162,17 @@ Summarizing this:
 
 ## Summary
 
-+--------------------------+--------------------------+--------------------------+
-| **Criterium**            | **[C++                   | **[Qt                    |
-|                          | Builder](CppBuilder.htm) | Creator](CppQtCreator.ht |
-|                          | 6.0 Enterprise edition** | m)                       |
-|                          |                          | 1.3.1**                  |
-+--------------------------+--------------------------+--------------------------+
-| **Development of console | Similar, low             | Similar, high            |
-| applications**           | [Boost](CppBoost.htm)    | [Boost](CppBoost.htm)    |
-|                          | support                  | support                  |
-+--------------------------+--------------------------+--------------------------+
-| **Initial                | Non-minimal, can be      | Non-minimal, can be      |
-| [main](CppMain.htm)      | removed ruthlessly       | removed ruthlessly       |
-| [function](CppFunction.h |                          |                          |
-| tm)                      |                          |                          |
-| in console application** |                          |                          |
-+--------------------------+--------------------------+--------------------------+
-| **[GUI](CppGui.htm)      | Plenty of screen space,  | Screen cluttered with    |
-| designer**               | all windows can be       | windows, different ways  |
-|                          | hidden in the same way,  | to hide and show most    |
-|                          | all windows have a       | windows                  |
-|                          | shortcut key             |                          |
-+--------------------------+--------------------------+--------------------------+
-| **Ease of learning       | [VCL](CppVcl.htm) has    | [Qt](CppQt.htm) does not |
-| graphical                | non-visual components    | have non-visual widgets, |
-| [library](CppLibrary.htm | (TTimer, for example)    | so a QTimer's behavior   |
-| )                        | that a beginner can use  | must be written in code, |
-| used by                  | without writing code     | which is harder and      |
-| [GUI](CppGui.htm)        |                          | error-prone              |
-| designer**               |                          |                          |
-+--------------------------+--------------------------+--------------------------+
-| **Component/widget       | Clickable TLabel for     | Non-clickable            |
-| architecture**           | labels, clickable        | [QLabel](CppQLabel.htm)  |
-|                          | [TImage](CppTImage.htm)  | for both labels and      |
-|                          | for images               | images                   |
-+--------------------------+--------------------------+--------------------------+
-| **Adding methods to      | Easy and transparent     | Tedious and less         |
-| dialogs**                |                          | transparent              |
-+--------------------------+--------------------------+--------------------------+
-| **Component/widget       | Basic by default, but    | Reimplementation of      |
-| use/re-use and           | also possible to         | [virtual](CppVirtual.htm |
-| extension**              | reimplement              | )                        |
-|                          | [virtual](CppVirtual.htm | [member                  |
-|                          | )                        | functions](CppMemberFunc |
-|                          | [member                  | tion.htm)                |
-|                          | functions](CppMemberFunc | with magic names and     |
-|                          | tion.htm)                | unknown functioning      |
-+--------------------------+--------------------------+--------------------------+
-| **Layout management**    | All Component have an    | Layout managers with     |
-|                          | Alignment property, use  | good default behavior,   |
-|                          | of TPanel as workhorses, | but less intuitive for   |
-|                          | TPanel works intuitively | more complex custom      |
-|                          | for complex custom       | behavior                 |
-|                          | behavior                 |                          |
-+--------------------------+--------------------------+--------------------------+
-| **Documentation**        | VCL                      | Qt                       |
-|                          | [classes](CppClass.htm)  | [classes](CppClass.htm)  |
-|                          | well documented, easy to | well documented, it      |
-|                          | read the documentation,  | takes time to learn      |
-|                          | [STL](CppStl.htm) fully  | reading the              |
-|                          | documented               | documentation, no        |
-|                          |                          | [STL](CppStl.htm)        |
-|                          |                          | documentation            |
-+--------------------------+--------------------------+--------------------------+
+Criterion|C++ Builder 6.0 Enterprise edition|Qt Creator 1.3.1
+---|---|---
+Development of console applications|Similar, low Boost support|Similar, complete Boost support
+GUI designer|Plenty of screen space, all windows can be hidden in the same way, all windows have a shortcut key|Screen cluttered with windows, different ways to hide and show most windows
+Initial main|Non-minimal, can be removed ruthlessly|Non-minimal, can be removed ruthlessly
+Ease of learning graphical library used by GUI designer|VCL has non-visual components (for example, TTimer) that a beginner can use without writing code|Qt does not have non-visual widgets, so a QTimer's behavior must be written in code, which is harder and error-prone
+Component/widget architecture|TLabel for labels, TImage for images|QLabel for both labels and images
+Adding methods to dialogs|Easy and transparent|Tedious and less transparent
+Component/widget use/re-use and extension|Basic by default, but also possible to reimplement virtual member functions|Reimplementation of virtual member functions with magic names and unknown meaning
+Layout management|All Component have an  Alignment property, use of TPanel as workhorses, TPanel works intuitively for complex custom behavior| Layout managers with good default behavior, but less intuitive for more complex custom behavior
+Documentation|VCL well documented, easy to read the documentation, STL fully documented|Qt classes well documented, it takes time to learn reading the documentation, no STL documentation
 
 My personal conclusion has remained the same:
 
