@@ -46,7 +46,9 @@ script:
   - sleep 10
   - sudo killall thinking_qt_1
   - cd ..
+  ###############################################
   # Thinking Wt 1
+  ###############################################
   - cd thinking_wt_1
   - qmake
   - make
@@ -54,26 +56,28 @@ script:
   - sleep 10
   - sudo killall thinking_wt_1
   - cd ..
+  ###############################################
   # Thinking Wt 2
+  ###############################################
   - cd thinking_wt_2
   - cd thinking_wt_2_1
   - qmake
   - make
-  - ./thinking_wt_2_1 &
+  - ./thinking_wt_2_1 --docroot . --http-address 0.0.0.0 --http-port 8080 &
   - sleep 10
   - sudo killall thinking_wt_2_1
   - cd ..
   - cd thinking_wt_2_2
   - qmake
   - make
-  - ./thinking_wt_2_2 &
+  - ./thinking_wt_2_2 --docroot . --http-address 0.0.0.0 --http-port 8080 &
   - sleep 10
   - sudo killall thinking_wt_2_2
   - cd ..
   - cd thinking_wt_2_3
   - qmake
   - make
-  - ./thinking_wt_2_3 &
+  - ./thinking_wt_2_3 --docroot . --http-address 0.0.0.0 --http-port 8080 &
   - sleep 10
   - sudo killall thinking_wt_2_3
   - cd ..
