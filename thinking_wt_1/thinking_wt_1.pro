@@ -10,3 +10,5 @@ LIBS += -lboost_signals
 
 #Wt
 LIBS += -lwt -lwthttp
+#Wt uses Boost.Signal, which is deprecated
+DEFINES += BOOST_SIGNALS_NO_DEPRECATION_WARNING
