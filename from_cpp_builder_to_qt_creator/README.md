@@ -523,7 +523,7 @@ private slots:
 //---------------------------------------------------------------------------
 #endif // QTTESTASCIIARTERDIALOG_H
 
-``` 
+```
 
 ### qttestasciiarterdialog.cpp
 
@@ -660,7 +660,6 @@ void QtTestAsciiArterDialog::on_button_about_clicked()
   d.exec();
 }
 //---------------------------------------------------------------------------
-
 ```
 
 ## Conclusion
