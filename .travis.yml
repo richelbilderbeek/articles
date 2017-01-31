@@ -47,6 +47,13 @@ script:
   - sudo killall thinking_qt_1
   - cd ..
   ###############################################
+  # Compare shared_ptrs
+  ###############################################
+  - cd compare_shared_ptrs
+  - qmake
+  - make
+  - ./compare_shared_ptrs
+  ###############################################
   # Thinking Wt 1
   ###############################################
   - cd thinking_wt_1
