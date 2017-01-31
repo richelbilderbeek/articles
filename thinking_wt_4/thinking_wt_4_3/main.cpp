@@ -1,4 +1,5 @@
 #include <boost/signals2.hpp>
+#include <QFile>
 #include <Wt/WApplication>
 #include <Wt/WBreak>
 #include <Wt/WBrush>
@@ -332,28 +333,15 @@ Wt::WApplication *createApplication(
   return new WtTicTacToeApplication(env);
 }
 //---------------------------------------------------------------------------
-#include <cassert>
-#include <fstream>
-
-//From http://www.richelbilderbeek.nl/CppCopyFile.htm
-void CopyFile(const std::string& fileNameFrom, const std::string& fileNameTo)
-{
-  assert(FileExists(fileNameFrom));
-  std::ifstream in (fileNameFrom.c_str());
-  std::ofstream out(fileNameTo.c_str());
-  out << in.rdbuf();
-  out.close();
-  in.close();
-}
-//---------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
-  CopyFile("/home/richel/qtsdk-2010.04/bin/Projects/Website/CppThinkingWt4_3/wt.css",
-    "/home/richel/qtsdk-2010.04/bin/Projects/Website/CppThinkingWt4_3-build-desktop/wt.css");
-
-  CopyFile("/home/richel/qtsdk-2010.04/bin/Projects/Website/CppThinkingWt4_3/RichelbilderbeekNlBackground.png",
-    "/home/richel/qtsdk-2010.04/bin/Projects/Website/CppThinkingWt4_3-build-desktop/RichelbilderbeekNlBackground.png");
-
+  {
+    QFile f(":/files/wt.css");
+    f.copy("wt.css");
+  }
+  {
+    QFile f(":/files/RichelbilderbeekNlBackground.png");
+    f.copy("RichelbilderbeekNlBackground.png");
+  }
   return WRun(argc, argv, &createApplication);
 }
-//---------------------------------------------------------------------------

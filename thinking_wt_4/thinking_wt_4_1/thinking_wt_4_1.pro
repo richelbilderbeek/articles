@@ -5,7 +5,7 @@ CONFIG   -= app_bundle
 TEMPLATE = app
 
 #Boost
-LIBS += -lboost_signals
+LIBS += -lboost_signals -lboost_filesystem -lboost_system
 
 #Wt
 LIBS += -lwt -lwthttp
@@ -18,3 +18,6 @@ HEADERS  += tictactoe.h
 
 OTHER_FILES += \
     wt.css
+
+RESOURCES += \
+    thinking_wt_4_1.qrc

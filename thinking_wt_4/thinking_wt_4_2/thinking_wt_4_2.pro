@@ -17,3 +17,6 @@ SOURCES += main.cpp \
 HEADERS  += tictactoe.h
 OTHER_FILES += \
     wt.css
+
+RESOURCES += \
+    thinking_wt_4_2.qrc
