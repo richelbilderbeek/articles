@@ -82,7 +82,6 @@ this, next step is to seperate the [class](CppClass.htm) in a working
 example.
 
 ``` 
-
 #include <iostream>
 #include <QObject>
 
@@ -123,25 +122,18 @@ int main()
 ```
  
 ## CppFromQtSignalToBoostSignal2: the working starting point
----------------------------------------------------------
-
- 
 
 -   [Download the Qt Creator project
     'CppFromQtSignalToBoostSignal2' (zip)](CppFromQtSignalToBoostSignal2.zip)
-
- 
 
 The code below would be the working starting point. The next step is to
 replace the [Qt signals](CppQtSignal.htm) by [Boost
 signals](CppBoostSignal.htm).
 
- 
 
 ### main.cpp
 
 ```
-
 #include "qtemitter.h"
 #include "qtreceiver.h"
 
@@ -162,7 +154,6 @@ int main()
 ### qtemitter.cpp
 
 ```
-
 #include <iostream>
 #include "qtemitter.h"
 
@@ -175,8 +166,8 @@ void QtEmitter::DoEmit()
 
 ### qtemitter.h
 
-```
 
+```
 #ifndef QTEMITTER_H
 #define QTEMITTER_H
 
@@ -193,7 +184,7 @@ signals:
 
 #endif // QTEMITTER_H
 ```
- 
+
 
 ### qtreceiver.cpp
 
@@ -251,8 +242,6 @@ void Emitter::DoEmit()
   m_signal();
 }
 ``` 
-
- 
 
 ### emitter.h
 

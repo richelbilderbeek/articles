@@ -41,11 +41,11 @@ This change in architecture can be displayed graphically:
 
 Before:
 
-![C++ Builder architecture (png)](CppFromCppBuilderToQtCreatorBefore.png)
+![C++ Builder architecture (png)](from_cpp_builder_to_qt_creator_1.png)
 
 Here, all functionality resides in one Winnebago class.
 
-![Qt Creator architecture (png)](CppFromCppBuilderToQtCreator.png)
+![Qt Creator architecture (png)](from_cpp_builder_to_qt_creator_1.png)
 
 Here, all functionality is distributed over multiple classes,
 keeping open the possibility to transform it into a Wt

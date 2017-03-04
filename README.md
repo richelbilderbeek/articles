@@ -14,7 +14,6 @@ I have written the following articles:
  * [from_cpp_builder_to_qt_creator](from_cpp_builder_to_qt_creator/README.md)
  * [from_desktop_to_web_application](from_desktop_to_web_application/README.md)
  * [from_qt_signal_to_boost_signal](from_qt_signal_to_boost_signal/README.md)
- * [testing_thread](testing_thread/README.md)
  * [thinking_qt_1](thinking_qt_1/README.md)
  * [thinking_wt_1](thinking_wt_1/README.md)
  * [thinking_wt_2](thinking_wt_2/README.md)

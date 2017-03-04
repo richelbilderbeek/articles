@@ -1,28 +1,9 @@
-[Go back to Richel Bilderbeek's homepage](index.htm).
-
-[Go back to Richel Bilderbeek's C++ page](Cpp.htm).
-
- 
-
- 
-
- 
-
- 
-
- 
-
-([C++](Cpp.htm)) [Wt example 4: broadcasting using WtBroadcastServer](CppWtExample4.htm)
-========================================================================================
-
- 
+# ([C++](Cpp.htm)) [Wt example 4: broadcasting using WtBroadcastServer](CppWtExample4.htm)
 
 [Wt example 4: broadcasting using WtBroadcastServera](CppWtExample4.htm)
 is an [article](CppArticle.htm) about a simple [Wt](CppWt.htm)
 [example](CppWtExample.htm) in which is shown how multiple clients can
 respond to the same data source and be notified when needed.
-
- 
 
 This [example](CppWtExample.htm) shows how to use two
 [classes](CppClass.htm) to do most of the work for you. For a complete
@@ -30,12 +11,8 @@ view of all delegated tasks, [Wt example 3:
 broadcasting](CppWtExample3.htm) gives a complete view of all
 bookkeeping necessary.
 
- 
-
 The code shown is simplified from the [tool](Tools.htm)
 [TestBroadcastServer](ToolTestBroadcastServer.htm) (version 1.0).
-
- 
 
 This example has the following players:
 
@@ -47,36 +24,37 @@ This example has the following players:
     [WtBroadcastServerClients](CppWtBroadcastServerClient.htm) that has
     contents editable and viewable to all web page visitos
 
- 
-
 The program does the following:
 
 -   WtMainDialog displays one [Wt::WLineEdit](CppWLineEdit.htm) that
     acts as one shared edit box for all visitors
 
- 
-
 Below, the WtMainDialog and its communication to the
 [WtBroadcastServer](CppWtBroadcastServer.htm) is discussed in detail,
 starting at its [header file](CppHeaderFile.htm).
 
- 
+## The [WtBroadcastServer](CppWtBroadcastServer.htm) [header file](CppHeaderFile.htm)
 
- 
+```
+struct WtMainDialog : public Wt::WContainerWidget, WtBroadcastServerClient
+{
+  WtMainDialog();
 
- 
+  private:
+  ///The user interface
+  struct Ui
+  {
+    Ui() : m_edit(0) {}
+    Wt::WLineEdit * m_edit;
+  } ui;
 
- 
+  ///The user changes the text in the Wt::WLineEdit
+  void OnEditChanged();
 
-The [WtBroadcastServer](CppWtBroadcastServer.htm) [header file](CppHeaderFile.htm)
-----------------------------------------------------------------------------------
-
- 
-
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ` struct WtMainDialog : public Wt::WContainerWidget, WtBroadcastServerClient {   WtMainDialog();    private:   ///The user interface   struct Ui   {     Ui() : m_edit(0) {}     Wt::WLineEdit * m_edit;   } ui;    ///The user changes the text in the Wt::WLineEdit   void OnEditChanged();    ///The server updates the page   void UpdatePage(); };`
-  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+  ///The server updates the page
+  void UpdatePage();
+};
+```
  
 
 This header file has the following elements:
@@ -111,26 +89,35 @@ This header file has the following elements:
     define this [abstract](CppAbstract.htm) method, otherwise the
     [compiler](CppCompiler.htm) will indicate this
 
- 
+## The [WtBroadcastServer](CppWtBroadcastServer.htm) [implementation file](CppImplementationFile.htm)
 
- 
-
- 
-
- 
-
- 
-
-The [WtBroadcastServer](CppWtBroadcastServer.htm) [implementation file](CppImplementationFile.htm)
---------------------------------------------------------------------------------------------------
-
- 
-
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  ` WtMainDialog::WtMainDialog() {   ui.m_edit = new Wt::WLineEdit(this);   ui.m_edit->keyWentUp().connect(this,&WtMainDialog::OnEditChanged); } //--------------------------------------------------------------------------- void WtMainDialog::OnEditChanged() {   WtBroadcastServer::GetInstance()->SetData(     std::string(ui.m_edit->text().toUTF8())); } //--------------------------------------------------------------------------- void WtMainDialog::UpdatePage() {   std::string text;   try   {     text = boost::any_cast<std::string>(WtBroadcastServer::GetInstance()->GetData());   }   catch (boost::bad_any_cast&)   {     text = "TestBroadcastServer";   }   ui.m_edit->setText(text.c_str()); }`
-  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
- 
+```
+WtMainDialog::WtMainDialog()
+{
+  ui.m_edit = new Wt::WLineEdit(this);
+  ui.m_edit->keyWentUp().connect(this,&WtMainDialog::OnEditChanged);
+}
+//---------------------------------------------------------------------------
+void WtMainDialog::OnEditChanged()
+{
+  WtBroadcastServer::GetInstance()->SetData(
+    std::string(ui.m_edit->text().toUTF8()));
+}
+//---------------------------------------------------------------------------
+void WtMainDialog::UpdatePage()
+{
+  std::string text;
+  try
+  {
+    text = boost::any_cast<std::string>(WtBroadcastServer::GetInstance()->GetData());
+  }
+  catch (boost::bad_any_cast&)
+  {
+    text = "TestBroadcastServer";
+  }
+  ui.m_edit->setText(text.c_str());
+}
+```
 
 WtMainDialog has only three methods:
 
@@ -157,20 +144,7 @@ WtMainDialog has only three methods:
     boost::bad\_any\_cast and the content content of the Wt::WLineEdit
     is set to the name of the application
 
- 
-
- 
-
- 
-
- 
-
- 
-
-Conclusion
-----------
-
- 
+## Conclusion
 
 Compared to the previous [example](CppWtExample.htm), that is [Wt
 example 3: broadcasting](CppWtExample3.htm), this
@@ -179,21 +153,6 @@ focussed: all bookkeeping is done by
 [WtBroadcastServer](CppWtBroadcastServer.htm) and
 [WtBroadcastServerClient](CppWtBroadcastServerClient.htm).
 
- 
+## External links
 
- 
-
- 
-
- 
-
- 
-
-[Go back to Richel Bilderbeek's C++ page](Cpp.htm).
-
-[Go back to Richel Bilderbeek's homepage](index.htm).
-
- 
-
-[![Valid XHTML 1.0 Strict](valid-xhtml10.png){width="88"
-height="31"}](http://validator.w3.org/check?uri=referer)
+ * [Original HTML article](http://richelbilderbeek.nl/CppWtExample4.htm)
