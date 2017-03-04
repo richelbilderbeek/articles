@@ -26,3 +26,7 @@ I have written the following articles:
 ## R
 
  * [Raising your code to professional standards](https://github.com/richelbilderbeek/sdj_raising_your_code_to_professional_standards)
+
+## BEAST2
+
+ * [How to add a tree prior to BEAST2?](https://github.com/BEAST2-Dev/beast-docs/blob/master/CreateNewTreePrior/CreateNewTreePrior.md)
