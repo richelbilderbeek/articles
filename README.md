@@ -8,19 +8,20 @@ I have written the following articles:
 
 ## C++
 
- * [compare_cpp_builder_and_qt_creator](compare_cpp_builder_and_qt_creator/README.md)
+ * ['Simplify C++!': Continuous integration with Travis CI](https://github.com/richelbilderbeek/simplify_cpp_travis_intro)
+ * [Compare C++ Build and Qt Creator](compare_cpp_builder_and_qt_creator/README.md)
  * [compare_cpp_builder_and_qt_creator_again](compare_cpp_builder_and_qt_creator_again/README.md)
- * [compare_shared_ptrs](compare_shared_ptrs/README.md)
- * [from_cpp_builder_to_qt_creator](from_cpp_builder_to_qt_creator/README.md)
- * [from_desktop_to_web_application](from_desktop_to_web_application/README.md)
- * [from_qt_signal_to_boost_signal](from_qt_signal_to_boost_signal/README.md)
- * [thinking_qt_1](thinking_qt_1/README.md)
- * [thinking_wt_1](thinking_wt_1/README.md)
- * [thinking_wt_2](thinking_wt_2/README.md)
- * [thinking_wt_3](thinking_wt_3/README.md)
- * [thinking_wt_4](thinking_wt_4/README.md)
- * [wt_example_3](wt_example_3/README.md)
- * [wt_example_4](wt_example_4/README.md)
+ * [Compare shared_ptrs](compare_shared_ptrs/README.md)
+ * [From C++ Builder to Qt Creator](from_cpp_builder_to_qt_creator/README.md)
+ * [From desktop to web application](from_desktop_to_web_application/README.md)
+ * [From Qt signal to boost::signal](from_qt_signal_to_boost_signal/README.md)
+ * [Thinking Qt 1](thinking_qt_1/README.md)
+ * [Thinking Wt 1](thinking_wt_1/README.md)
+ * [Thinking Wt 2](thinking_wt_2/README.md)
+ * [Thinking Wt 3](thinking_wt_3/README.md)
+ * [Thinking Wt 4](thinking_wt_4/README.md)
+ * [Wt example 3](wt_example_3/README.md)
+ * [Wt example 4](wt_example_4/README.md)
 
 ## R
 
