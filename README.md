@@ -26,7 +26,8 @@ I have written the following articles:
 ## R
 
  * [Raising your code to professional standards](https://github.com/richelbilderbeek/sdj_raising_your_code_to_professional_standards)
-
+ * [Call BEAST2 for Bayesian evolutionary analysis from R](https://ropensci.org/blog/2020/01/28/babette/)
+ 
 ## BEAST2
 
  * [How to add a tree prior to BEAST2?](https://github.com/BEAST2-Dev/beast-docs/blob/master/CreateNewTreePrior/CreateNewTreePrior.md)
