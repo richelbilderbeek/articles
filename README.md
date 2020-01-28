@@ -26,7 +26,8 @@ I have written the following articles:
 ## R
 
  * [Raising your code to professional standards](https://github.com/richelbilderbeek/sdj_raising_your_code_to_professional_standards)
- * [Call BEAST2 for Bayesian evolutionary analysis from R](https://ropensci.org/blog/2020/01/28/babette/)
+ * [Methods.blog: The babette R Package: How to Sooth the Phylogenetic BEAST2](https://methodsblog.com/2018/06/25/babette-beast2)
+ * [rOpenSci blog post: Call BEAST2 for Bayesian evolutionary analysis from R](https://ropensci.org/blog/2020/01/28/babette/)
  
 ## BEAST2
 
