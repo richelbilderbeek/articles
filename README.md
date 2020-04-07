@@ -6,6 +6,14 @@
 
 I have written the following articles:
 
+## Academic
+
+ * :unlock: :newspaper: [babette](https://github.com/richelbilderbeek/babette_article) 
+ * :mag: :lock: [pirouette](https://github.com/richelbilderbeek/pirouette_article)
+ * :lock: [BBBQ](https://github.com/richelbilderbeek/bbbq_article)
+
+Legend: :unlock: = public, :newspaper: = published, :mag: = under review, :lock: = private
+
 ## C++
 
  * ['Simplify C++!': Continuous integration with Travis CI](https://github.com/richelbilderbeek/simplify_cpp_travis_intro)
@@ -32,3 +40,16 @@ I have written the following articles:
 ## BEAST2
 
  * [How to add a tree prior to BEAST2?](https://github.com/BEAST2-Dev/beast-docs/blob/master/CreateNewTreePrior/CreateNewTreePrior.md)
+
+
+
+## Abandoned
+
+Here just out of nostalgia.
+
+ * :lock: [daisieme](https://github.com/richelbilderbeek/daisieme_article)
+ * :lock: [korter_project](https://github.com/richelbilderbeek/korter_project_article)
+ * :lock: [raket](https://github.com/richelbilderbeek/raket_article)
+ * :lock: [wiritte](https://github.com/richelbilderbeek/wirittte_article)
+ * :lock: [distancer](https://github.com/richelbilderbeek/distancer_article)
+
