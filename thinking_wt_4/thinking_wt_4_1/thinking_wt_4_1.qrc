@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/files">
-        <file>wt.css</file>
-        <file>RichelbilderbeekNlBackground.png</file>
-    </qresource>
-</RCC>
